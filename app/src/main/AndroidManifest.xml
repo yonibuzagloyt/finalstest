@@ -13,6 +13,7 @@
         android:theme="@style/Theme.MyApplication">
         <activity android:name=".ListActivity" />
         <activity android:name=".AddTaskActivity" />
+        <activity android:name=".TaskDetailsActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

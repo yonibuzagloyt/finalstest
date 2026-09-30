@@ -128,8 +128,11 @@ public class ListActivity extends AppCompatActivity {
         lvTasks.setOnItemClickListener((parent, view, position, id) -> {
             // position is the place in the FILTERED list, so take the task itself and use its id
             Task task = shownTasks.get(position);
-            // TODO screen 4: pass task.getId() to it
-            Toast.makeText(this, task.getTitle(), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(ListActivity.this, TaskDetailsActivity.class);
+            intent.putExtra("USERNAME", username);
+            intent.putExtra("ID", task.getId());
+            startActivity(intent);
+            reload();
         });
 
         // Long press: delete dialog
