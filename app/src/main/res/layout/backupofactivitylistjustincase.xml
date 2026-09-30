@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="start"
+    android:padding="16dp"> <!-- Added padding for better spacing -->
+
+    <TextView
+        android:id="@+id/tvHello"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="\nשלום, שם!"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tvStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="משימות: 4 | הושלמו: 0 | נקודות: 0\n"
+        android:textSize="20sp" />
+
+    <!-- This horizontal layout puts the TextView and Spinner side-by-side -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+        <Spinner
+            android:id="@+id/spFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="48dp" />
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="סינון לפי מקצוע: "
+        android:textSize="20sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/LibaryListView"
+        android:layout_width="match_parent"
+        android:layout_height="450dp" />
+    <!-- This horizontal layout puts the TextView and Spinner side-by-side -->
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/HardBookButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Add Printed Book..."
+            android:layout_weight="1"
+            android:minHeight="48dp"
+             />
+
+        <Button
+            android:id="@+id/EBookButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="48dp"
+            android:text="Add EBook!" />
+    </LinearLayout>
+</LinearLayout>

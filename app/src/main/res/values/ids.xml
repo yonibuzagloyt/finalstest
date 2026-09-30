@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btnEnter" type="id" />
+    <item name="btnReset" type="id" />
+    <item name="tvWelcome" type="id" />
+    <item name="etName" type="id" />
+</resources>
